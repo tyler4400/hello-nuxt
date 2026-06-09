@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 同时输出 props 传入的 message 和内部 counter -->
-    <h1>{{ message }} - {{ counter }}</h1>
+    <div>{{ message }} - {{ counter }}</div>
     <button class="p-2" @click="counter++">Increase</button>
   </div>
 </template>
