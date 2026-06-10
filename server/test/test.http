@@ -1,0 +1,16 @@
+### hello
+GET {{host}}:{{port}}/api/hello
+
+### user/[id]
+GET {{host}}:{{port}}/api/user/{{$random.name.firstName}}?name={{$random.company.name}}
+
+### body.post
+POST {{host}}:{{port}}/api/body
+Content-Type: application/json
+
+{
+  "id": "{{$random.uuid}}",
+  "price": {{$random.integer()}},
+  "ts": {{$timestamp}},
+  "value": "content"
+}

@@ -16,6 +16,7 @@
       <li><NuxtLink to="/post/2">useNuxtData post2</NuxtLink></li>
       <li><NuxtLink to="/post2/1">useAsyncData post2-1</NuxtLink></li>
       <li><NuxtLink to="/post2/2">useAsyncData post2-2</NuxtLink></li>
+      <li><NuxtLink to="/server">server基础</NuxtLink></li>
       <!-- 外部导航：加 external，会渲染成普通 <a> 标签 -->
     </ul>
     <div>当前登录用户: {{currentUser.userName || '无'}}</div>
