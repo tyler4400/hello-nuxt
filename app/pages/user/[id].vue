@@ -20,4 +20,16 @@ definePageMeta({
       'auth'
   ],
 })
+
+// useSeoMeta({
+//   // 用 getter 返回响应式 title；数据未到时可能是 undefined，到达后自动更新
+//   title: () => `User: ${ route.params.id}`,
+// })
+
+useHead({
+  title: 'User Detail Page',
+  meta: [
+    { name: 'description', content: 'User Detail Page desc' },
+  ],
+})
 </script>
