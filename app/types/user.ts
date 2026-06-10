@@ -11,3 +11,10 @@ export interface UserData {
   username: string
   email: string
 }
+
+export interface PostData {
+  id: number
+  userId: number
+  title: string
+  body: string
+}
