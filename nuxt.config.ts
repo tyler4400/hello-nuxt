@@ -2,7 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: [],
+  modules: ['nuxt-mongoose'],
+  mongoose: {
+    // uri: 'mongodb://localhost:27017/your-db', // 会自动去读.env NUXT_MONGOOSE_URI
+    // options: {},
+    modelsDir: 'models', // 模型目录，默认 server/models
+  },
   css: ['~/assets/style.css'],
   // app 是对整个应用程序的配置，代码中使用useRuntimeConfig()获取
   // 其下的 head 对应 HTML 的 <head> 标签内容。可在这里全局设置第三方 CSS、字符编码、标题、meta 等。
