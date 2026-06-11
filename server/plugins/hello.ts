@@ -14,6 +14,6 @@ export default defineNitroPlugin((nitroApp) => {
   // 响应返回前
   nitroApp.hooks.hook('beforeResponse', (event, response) => {
     // 第二参可拿到将要返回的数据 response.body
-    console.log('on response', event.path, response.body)
+    console.log('on response', event.path)
   })
 })
