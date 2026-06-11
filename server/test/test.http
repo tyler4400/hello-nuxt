@@ -25,3 +25,6 @@ Content-Type: application/json
 
 ### safe （未登录时 会401）
 GET {{host}}:{{port}}/api/safe
+
+### testEnv
+GET {{host}}:{{port}}/api/testEnv

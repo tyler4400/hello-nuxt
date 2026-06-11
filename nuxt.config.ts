@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [],
   css: ['~/assets/style.css'],
-  // app 是对整个应用程序的配置，其下的 head 对应 HTML 的 <head> 标签内容。可在这里全局设置第三方 CSS、字符编码、标题、meta 等。
+  // app 是对整个应用程序的配置，代码中使用useRuntimeConfig()获取
+  // 其下的 head 对应 HTML 的 <head> 标签内容。可在这里全局设置第三方 CSS、字符编码、标题、meta 等。
   app: {
     // pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -21,6 +22,14 @@ export default defineNuxtConfig({
       //   { rel: 'stylesheet', href: 'https://cdn.example.com/some.css' },
       // ],
     },
+  },
+  // Nuxt 用特殊命名约定让 .env 自动覆盖 runtimeConfig，无需手写 process.env
+  runtimeConfig: {
+    // 默认值，运行时可被环境变量覆盖
+    apiKey: '1234',
+    public: {
+      someUrl: 'https://example.com',
+    }
   },
   devServer: {
     port: 3002,
