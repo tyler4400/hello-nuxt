@@ -29,7 +29,12 @@ export default defineNuxtConfig({
     apiKey: '1234',
     public: {
       someUrl: 'https://example.com',
-    }
+    },
+    redis: {
+      // 默认空，由 .env 覆盖
+      host: '',
+      port: 0,
+    },
   },
   devServer: {
     port: 3002,
@@ -37,13 +42,13 @@ export default defineNuxtConfig({
   nitro: {
     storage: {
       // 'redis' 是这个挂载点的名称，自定义
-      redis: {
-        driver: 'redis',
-        port: 6379,
-        host: '127.0.0.1', // localhost
-        password: '',       // 本地无密码
-        db: 0,              // 默认 0，可省略
-      },
+      // redis: {
+      //   driver: 'redis',
+      //   port: 6379,
+      //   host: '127.0.0.1', // localhost
+      //   password: '',       // 本地无密码
+      //   db: 0,              // 默认 0，可省略
+      // },
     },
   },
 })
