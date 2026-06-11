@@ -15,5 +15,13 @@ Content-Type: application/json
   "value": "content"
 }
 
-### safe
+### login
+POST {{host}}:{{port}}/api/login
+Content-Type: application/json
+
+{
+  "userName": "{{$random.name.firstName}}"
+}
+
+### safe （未登录时 会401）
 GET {{host}}:{{port}}/api/safe
